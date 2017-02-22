@@ -3,7 +3,7 @@ module HashidsActiverecord
     require 'hashids'
     extend ClassMethods
     include InstanceMethods
-    cattr_accessor :hash_salt, :min_length, :col_name
+    cattr_accessor :hash_salt, :min_length, :alphabets, :col_name
     self.hash_salt  = (options[:salt] || default_salt)
     self.min_length = (options[:min_length] || 3)
     self.alphabets  = (options[:alphabets] || Hashids::DEFAULT_ALPHABET)
